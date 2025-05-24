@@ -71,5 +71,15 @@ $lang = [
     'privacy_description' => '[SW] We prioritize your privacy and security when using our Instagram Downloader. Our service doesn\'t store your personal information or the content you download. We operate in compliance with Instagram\'s terms of service and respect copyright laws. Always ensure you have the right to download and use the Instagram content you\'re saving.',
     'conclusion' => '[SW] Start Downloading Instagram Content Today!',
     'conclusion_description' => '[SW] Whether you\'re looking to download Instagram videos, save Instagram photos, capture fleeting Instagram Stories, or archive trending Instagram Reels, our Instagram Downloader is your all-in-one solution. With its user-friendly interface, support for multiple content types, and commitment to high-quality downloads, you\'re just a few clicks away from saving your favorite Instagram content. Try our Instagram Downloader now and never lose a precious Instagram moment again!',
+
+    // Page Titles
+    'page_title_home' => '[SW] Instagram Downloader - Download Photos, Videos, Reels',
+    'page_title_video' => '[SW] Instagram Video Downloader',
+    'page_title_photo' => '[SW] Instagram Photo Downloader',
+    'page_title_reels' => '[SW] Instagram Reels Downloader',
+    'page_title_story' => '[SW] Instagram Story Downloader',
+    'page_title_igtv' => '[SW] Instagram IGTV Downloader',
+    'page_title_carousel' => '[SW] Instagram Carousel Downloader',
+    'page_title_profile' => '[SW] Instagram Profile Viewer',
 ];
 ?>

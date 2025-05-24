@@ -16,7 +16,28 @@ function get_lang_url($lang_code) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($lang['site_title']) ? $lang['site_title'] : 'SaveFromIG.com'; ?></title>
+    <title><?php
+            // $page_title_key is expected to be defined in the including PHP file (e.g., index.php)
+            $default_site_title = 'SaveFromIG.com - Instagram Downloader'; // A fallback if 'site_title' itself is missing
+            $site_name_for_append = _t('site_title', $default_site_title);
+
+            if (isset($page_title_key)) {
+                $specific_page_title = _t($page_title_key, ''); // Get specific title, default to empty if key not found
+                if (!empty($specific_page_title) && $specific_page_title !== $site_name_for_append) {
+                    // If specific title exists and is different from the main site title, append site name
+                    echo htmlspecialchars($specific_page_title) . " - " . htmlspecialchars($site_name_for_append);
+                } elseif (!empty($specific_page_title)) {
+                    // If specific title exists and IS the main site title (or similar), just use it
+                    echo htmlspecialchars($specific_page_title);
+                } else {
+                    // If specific title key is set but translation is empty, fallback to site_title
+                    echo htmlspecialchars($site_name_for_append);
+                }
+            } else {
+                // Fallback if no $page_title_key is set on the page
+                echo htmlspecialchars($site_name_for_append);
+            }
+        ?></title>
     
     <?php
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";

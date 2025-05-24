@@ -39,4 +39,14 @@ $lang = [
     'quick_links' => 'Quick Links',
     'follow_us' => 'Follow Us',
     'all_rights_reserved' => 'All rights reserved.',
+
+    // Page Titles
+    'page_title_home' => 'Instagram Downloader - Download Photos, Videos, Reels',
+    'page_title_video' => 'Instagram Video Downloader',
+    'page_title_photo' => 'Instagram Photo Downloader',
+    'page_title_reels' => 'Instagram Reels Downloader',
+    'page_title_story' => 'Instagram Story Downloader',
+    'page_title_igtv' => 'Instagram IGTV Downloader',
+    'page_title_carousel' => 'Instagram Carousel Downloader',
+    'page_title_profile' => 'Instagram Profile Viewer', // For viewer.php
 ];

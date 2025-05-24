@@ -1,4 +1,5 @@
 <?php
+$page_title_key = 'page_title_profile'; // Define page title key
 include 'includes/header.php';
 // include 'includes/language.php'; // Removed as header.php now handles language.php
 // include 'api/InstagramAPI.php'; // Removed as it's not directly used by this page for rendering

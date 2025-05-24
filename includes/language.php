@@ -61,9 +61,41 @@ if (isset($_GET['lang']) && array_key_exists($_GET['lang'], $available_languages
 
 $current_language = $_SESSION['lang'];
 
-include __DIR__ . "/../languages/{$current_language}.php";
+$lang_file_path = __DIR__ . "/../languages/{$current_language}.php";
+$default_lang_file_path = __DIR__ . "/../languages/{$default_language}.php";
+
+$lang_loaded_successfully = false;
+if (file_exists($lang_file_path)) {
+    // Attempt to include the current language file.
+    // The included file should define the $lang array.
+    include $lang_file_path;
+    if (isset($lang) && is_array($lang) && !empty($lang)) {
+        $lang_loaded_successfully = true;
+    }
+}
+
+// If the current language file failed to load or didn't define $lang properly,
+// load the default language file as a fallback.
+if (!$lang_loaded_successfully) {
+    if (file_exists($default_lang_file_path)) {
+        include $default_lang_file_path; // This should define $lang from en.php
+        // If even the default language fails, $lang might still be unset,
+        // and _t() will rely on its default parameter.
+        // To be absolutely sure $lang is an array for _t(), initialize it.
+        if (!isset($lang) || !is_array($lang)) {
+            $lang = []; // Initialize $lang as an empty array if default also failed.
+        }
+        // Optionally, set current_language to default_language if fallback occurred
+        // $_SESSION['lang'] = $default_language; // This might be too aggressive if user explicitly chose a language that's just missing content
+        // $current_language = $default_language;
+    } else {
+        // This is a critical error: default language file is missing.
+        // Initialize $lang as an empty array so _t() doesn't error on global $lang.
+        $lang = [];
+    }
+}
 
 function _t($key, $default = '') {
-    global $lang;
+    global $lang; // $lang should now be populated either by current or default language file
     return isset($lang[$key]) ? $lang[$key] : $default;
 }
