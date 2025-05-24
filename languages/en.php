@@ -1,6 +1,4 @@
 <?php
-$_GET['lang'] = 'en';
-include 'index.php';
 $lang = [
     'site_title' => 'SaveFromIG.com - Instagram Downloader',
     'home' => 'Home',

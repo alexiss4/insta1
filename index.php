@@ -1,6 +1,6 @@
 <?php
 include 'includes/header.php';
-include 'api/InstagramAPI.php';
+// include 'api/InstagramAPI.php'; // Removed as it's not directly used by index.php for rendering
 ?>
 
 

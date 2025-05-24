@@ -1,7 +1,7 @@
 <?php
 include 'includes/header.php';
-include 'includes/language.php';
-include 'api/InstagramAPI.php';
+// include 'includes/language.php'; // Removed as header.php now handles language.php
+// include 'api/InstagramAPI.php'; // Removed as it's not directly used by this page for rendering
 ?>
 
 <div class="hero-section">
@@ -127,4 +127,5 @@ include 'api/InstagramAPI.php';
     </div>
 </div>
 
+<script>window.selectedContentType = 'video';</script>
 <?php include 'includes/footer.php'; ?>
