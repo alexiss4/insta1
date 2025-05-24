@@ -1,11 +1,7 @@
 <?php
-// Убедимся, что функция _t() доступна
-if (!function_exists('_t')) {
-    function _t($key, $default = '') {
-        global $lang;
-        return isset($lang[$key]) ? $lang[$key] : $default;
-    }
-}
+// The _t() function is expected to be defined in includes/language.php,
+// which is included by includes/header.php.
+// Redundant definition removed from here.
 ?>
 <footer class="bg-light py-4 mt-5">
     <div class="container">
@@ -39,6 +35,9 @@ if (!function_exists('_t')) {
         </div>
     </div>
 </footer>
+
+<!-- Toast Container for notifications -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100"></div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

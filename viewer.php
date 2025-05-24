@@ -1,7 +1,7 @@
 <?php
 include 'includes/header.php';
-include 'includes/language.php';
-include 'api/InstagramAPI.php';
+// include 'includes/language.php'; // Removed as header.php now handles language.php
+// include 'api/InstagramAPI.php'; // Removed as it's not directly used by this page for rendering
 ?>
 
 <div class="hero-section">
@@ -123,4 +123,8 @@ include 'api/InstagramAPI.php';
                 <li>Full Profile Overview: See posts, highlights, and basic profile information.</li>
                 <li>User-Friendly Interface: Easy navigation and intuitive design.</li>
             </ul>
-            <?php include 'includes/footer.php'; ?>
+        </div> <!-- Closing the col-md-8 offset-md-2 -->
+    </div> <!-- Closing the row -->
+</div> <!-- Closing the container mt-5 -->
+<script>window.selectedContentType = 'profile';</script>
+<?php include 'includes/footer.php'; ?>
