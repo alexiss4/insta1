@@ -21,7 +21,34 @@ $available_languages = [
     'da' => 'Dansk',
     'fi' => 'Suomi',
     'no' => 'Norsk',
-    'el' => 'Ελληνικά'
+    'el' => 'Ελληνικά',
+    'sw' => 'Kiswahili', // New
+    'bn' => 'বাংলা'     // New
+];
+
+$language_flags = [
+    'en' => 'gb', // United Kingdom for English
+    'es' => 'es', // Spain
+    'fr' => 'fr', // France
+    'de' => 'de', // Germany
+    'it' => 'it', // Italy
+    'pt' => 'pt', // Portugal
+    'ru' => 'ru', // Russia
+    'ja' => 'jp', // Japan
+    'ko' => 'kr', // South Korea
+    'zh' => 'cn', // China
+    'ar' => 'sa', // Saudi Arabia for Arabic
+    'hi' => 'in', // India
+    'nl' => 'nl', // Netherlands
+    'pl' => 'pl', // Poland
+    'tr' => 'tr', // Turkey
+    'sv' => 'se', // Sweden
+    'da' => 'dk', // Denmark
+    'fi' => 'fi', // Finland
+    'no' => 'no', // Norway
+    'el' => 'gr', // Greece
+    'sw' => 'ke', // Kenya for Swahili (Example, can be tz, ug etc.)
+    'bn' => 'bd', // Bangladesh for Bengali
 ];
 
 $default_language = 'en';

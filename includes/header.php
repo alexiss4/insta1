@@ -47,11 +47,19 @@ function get_lang_url($lang_code) {
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php if (isset($language_flags[$current_language])): ?>
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/flags/4x3/<?php echo $language_flags[$current_language]; ?>.svg" alt="<?php echo $current_language; ?> flag" style="width: 20px; margin-right: 8px; vertical-align: middle;">
+                            <?php endif; ?>
                             <?php echo isset($available_languages[$current_language]) ? $available_languages[$current_language] : 'Language'; ?>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
                             <?php foreach ($available_languages as $code => $name): ?>
-                                <a class="dropdown-item <?php if ($code === $current_language) echo 'active'; ?>" href="<?php echo get_lang_url($code); ?>"><?php echo $name; ?></a>
+                                <a class="dropdown-item <?php if ($code === $current_language) echo 'active'; ?>" href="<?php echo get_lang_url($code); ?>">
+                                    <?php if (isset($language_flags[$code])): ?>
+                                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/flags/4x3/<?php echo $language_flags[$code]; ?>.svg" alt="<?php echo $code; ?> flag" style="width: 20px; margin-right: 8px; vertical-align: middle;">
+                                    <?php endif; ?>
+                                    <?php echo $name; ?>
+                                </a>
                             <?php endforeach; ?>
                         </div>
                     </li>

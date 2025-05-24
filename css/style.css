@@ -298,6 +298,7 @@ body {
 .content-tabs { /* This is the consolidated .content-tabs */
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Added this line */
     margin-bottom: 30px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
