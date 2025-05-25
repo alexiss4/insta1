@@ -19,28 +19,34 @@ function updatePlaceholder(contentType) {
 
 $(document).ready(function() {
     // Initialize placeholder based on the initially active tab on index.php
-    if ($('#instagram-form').length) { // Check if we are on a page with the main form
+    if ($('body#page-index').length > 0) { // Check if we are on index.php
         var initialActiveTab = $('.tab-button.active').first();
         if (initialActiveTab.length) {
             window.selectedContentType = initialActiveTab.data('type') || 'video';
+        } else {
+            // If no tab is active, find the one matching default selectedContentType and activate it
+            var defaultTab = $('.tab-button[data-type="' + window.selectedContentType + '"]');
+            if (defaultTab.length) {
+                defaultTab.addClass('active');
+            }
         }
         updatePlaceholder(window.selectedContentType);
     }
 
-    // Correct form submission handler that calls fetchContent
-    $('#instagram-form').submit(function(e) {
+    // Correct form submission handler that calls fetchContent (only for index.php)
+    $('#instagram-form').submit(function(e) { // This ID is unique to index.php
         e.preventDefault();
         var url = $('#instagram-url').val();
         fetchContent(url, window.selectedContentType); // Pass selectedContentType
     });
 
-    // Handler for the copy button
+    // Handler for the copy button (likely on index.php)
     $('#copy-btn').click(function() {
         var url = $('#instagram-url').val();
         copyToClipboard(url);
     });
 
-    // Handler for the "post" button
+    // Handler for the "post" button (likely on index.php)
     $('#post-btn').click(function() {
         var url = $('#instagram-url').val();
         shareContent(url);
@@ -48,9 +54,9 @@ $(document).ready(function() {
 
     // Handler for tab buttons
     $('.tab-button').click(function(e) {
-        // Only apply special logic if on a page with the main instagram form
-        if ($('#instagram-form').length) {
-            e.preventDefault(); // Stop navigation
+        // Only apply special AJAX logic if on index.php
+        if ($('body#page-index').length > 0) {
+            e.preventDefault(); // Stop navigation to other pages
             
             $('.tab-button').removeClass('active');
             $(this).addClass('active');

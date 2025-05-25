@@ -1,5 +1,6 @@
 <?php
 $page_title_key = 'page_title_home'; // Define page title key
+$page_body_id = 'page-index';        // Define body ID for index.php
 include 'includes/header.php';
 // include 'api/InstagramAPI.php'; // Removed as it's not directly used by index.php for rendering
 ?>

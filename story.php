@@ -125,6 +125,12 @@ include 'includes/header.php';
                 <li>Fast and Reliable: Quick downloads for time-sensitive content.</li>
             </ul>
         </div>
+
+        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for story.php -->
+            <h3><?php echo _t('story_extra_title', 'Story Download Specifics'); ?></h3>
+            <p><?php echo _t('story_extra_p1', 'Downloading stories is time-sensitive as they expire. Our tool fetches currently available public stories for the given username.'); ?></p>
+            <p><?php echo _t('story_extra_p2', 'Please be aware that you cannot download stories from private accounts or stories that have already expired.'); ?></p>
+        </div>
     </div>
 </div>
 

@@ -81,5 +81,28 @@ $lang = [
     'page_title_igtv' => '[SW] Instagram IGTV Downloader',
     'page_title_carousel' => '[SW] Instagram Carousel Downloader',
     'page_title_profile' => '[SW] Instagram Profile Viewer',
+
+    // Extra Content Sections
+    'video_extra_title' => '[SW] More About Video Downloads',
+    'video_extra_p1' => '[SW] Our service supports various video formats and resolutions, ensuring you get the best quality available. You can also choose to download only the audio from a video if needed.',
+    'video_extra_p2' => '[SW] Remember to respect copyright and privacy. Only download videos if you have the right to do so. For private accounts, you will not be able to download their content.',
+    'photo_extra_title' => '[SW] More About Photo Downloads',
+    'photo_extra_p1' => '[SW] Our service ensures that you download photos in their best available resolution. We support JPG, PNG, and other common image formats directly from Instagram.',
+    'photo_extra_p2' => '[SW] When downloading, consider the aspect ratio and dimensions. Instagram often crops images for display, but our tool aims to get the original upload.',
+    'reels_extra_title' => '[SW] Understanding Reels Downloads',
+    'reels_extra_p1' => '[SW] Reels are short, engaging videos. Our tool helps you save these quickly. Downloaded Reels include audio and are saved in standard video formats.',
+    'reels_extra_p2' => '[SW] Please note that some Reels may have specific privacy settings that could affect download availability if they are not public.',
+    'story_extra_title' => '[SW] Story Download Specifics',
+    'story_extra_p1' => '[SW] Downloading stories is time-sensitive as they expire. Our tool fetches currently available public stories for the given username.',
+    'story_extra_p2' => '[SW] Please be aware that you cannot download stories from private accounts or stories that have already expired.',
+    'igtv_extra_title' => '[SW] IGTV Download Tips',
+    'igtv_extra_p1' => '[SW] IGTV videos are typically longer. Ensure you have a stable connection for larger downloads. Our tool aims to get the full video in the best quality.',
+    'igtv_extra_p2' => '[SW] You can copy the IGTV link directly from the Instagram app or website. Publicly available IGTVs are supported.',
+    'carousel_extra_title' => '[SW] Carousel Download Insights',
+    'carousel_extra_p1' => '[SW] Carousels can contain a mix of photos and videos. Our tool helps you download all items from a public carousel post.',
+    'carousel_extra_p2' => '[SW] The downloaded items will typically be named in sequence to help you identify their order.',
+    'viewer_extra_title' => '[SW] Profile Viewing Tips',
+    'viewer_extra_p1' => '[SW] When viewing profiles, remember that only public information is accessible. Our tool does not bypass Instagram\'s privacy settings.',
+    'viewer_extra_p2' => '[SW] You can use the viewer to check out recent posts and story highlights of public profiles without needing to log in.',
 ];
 ?>

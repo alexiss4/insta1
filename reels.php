@@ -125,6 +125,12 @@ include 'includes/header.php';
                 <li>Free Service: No hidden fees or subscriptions.</li>
             </ul>
         </div>
+
+        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for reels.php -->
+            <h3><?php echo _t('reels_extra_title', 'Understanding Reels Downloads'); ?></h3>
+            <p><?php echo _t('reels_extra_p1', 'Reels are short, engaging videos. Our tool helps you save these quickly. Downloaded Reels include audio and are saved in standard video formats.'); ?></p>
+            <p><?php echo _t('reels_extra_p2', 'Please note that some Reels may have specific privacy settings that could affect download availability if they are not public.'); ?></p>
+        </div>
     </div>
 </div>
 

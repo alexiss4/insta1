@@ -125,6 +125,12 @@ include 'includes/header.php';
                 <li>Time-Saving: No need to manually screenshot or screen-record carousel items.</li>
             </ul>
         </div>
+
+        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for carousel.php -->
+            <h3><?php echo _t('carousel_extra_title', 'Carousel Download Insights'); ?></h3>
+            <p><?php echo _t('carousel_extra_p1', 'Carousels can contain a mix of photos and videos. Our tool helps you download all items from a public carousel post.'); ?></p>
+            <p><?php echo _t('carousel_extra_p2', 'The downloaded items will typically be named in sequence to help you identify their order.'); ?></p>
+        </div>
     </div>
 </div>
 

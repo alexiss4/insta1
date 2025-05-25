@@ -125,6 +125,12 @@ include 'includes/header.php';
                 <li>Cross-Platform Compatibility: Works on all major operating systems and devices.</li>
             </ul>
         </div>
+
+        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for igtv.php -->
+            <h3><?php echo _t('igtv_extra_title', 'IGTV Download Tips'); ?></h3>
+            <p><?php echo _t('igtv_extra_p1', 'IGTV videos are typically longer. Ensure you have a stable connection for larger downloads. Our tool aims to get the full video in the best quality.'); ?></p>
+            <p><?php echo _t('igtv_extra_p2', 'You can copy the IGTV link directly from the Instagram app or website. Publicly available IGTVs are supported.'); ?></p>
+        </div>
     </div>
 </div>
 

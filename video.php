@@ -125,6 +125,22 @@ include 'includes/header.php';
                 <li>Free to Use: No hidden costs or subscription fees.</li>
             </ul>
         </div>
+
+        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for video.php -->
+            <h3><?php echo _t('video_extra_title', 'More About Video Downloads'); ?></h3>
+            <p><?php echo _t('video_extra_p1', 'Our service supports various video formats and resolutions, ensuring you get the best quality available. You can also choose to download only the audio from a video if needed.'); ?></p>
+            <p><?php echo _t('video_extra_p2', 'Remember to respect copyright and privacy. Only download videos if you have the right to do so. For private accounts, you will not be able to download their content.'); ?></p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5"> <!-- New unique section for video.php -->
+    <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+            <h2><?php echo _t('video_extra_title', 'More About Video Downloads'); ?></h2>
+            <p><?php echo _t('video_extra_p1', 'Our service supports various video formats and resolutions, ensuring you get the best quality available. You can also choose to download only the audio from a video if needed.'); ?></p>
+            <p><?php echo _t('video_extra_p2', 'Remember to respect copyright and privacy. Only download videos if you have the right to do so. For private accounts, you will not be able to download their content.'); ?></p>
+        </div>
     </div>
 </div>
 

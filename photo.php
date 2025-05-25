@@ -125,6 +125,22 @@ include 'includes/header.php';
                 <li>Free to Use: No hidden costs or subscription fees.</li>
             </ul>
         </div>
+
+        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for photo.php -->
+            <h3><?php echo _t('photo_extra_title', 'More About Photo Downloads'); ?></h3>
+            <p><?php echo _t('photo_extra_p1', 'Our service ensures that you download photos in their best available resolution. We support JPG, PNG, and other common image formats directly from Instagram.'); ?></p>
+            <p><?php echo _t('photo_extra_p2', 'When downloading, consider the aspect ratio and dimensions. Instagram often crops images for display, but our tool aims to get the original upload.'); ?></p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5"> <!-- New unique section for photo.php -->
+    <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+            <h2><?php echo _t('photo_extra_title', 'More About Photo Downloads'); ?></h2>
+            <p><?php echo _t('photo_extra_p1', 'Our service ensures that you download photos in their best available resolution. We support JPG, PNG, and other common image formats directly from Instagram.'); ?></p>
+            <p><?php echo _t('photo_extra_p2', 'When downloading, consider the aspect ratio and dimensions. Instagram often crops images for display, but our tool aims to get the original upload.'); ?></p>
+        </div>
     </div>
 </div>
 

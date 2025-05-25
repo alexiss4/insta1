@@ -52,7 +52,7 @@ function get_lang_url($lang_code) {
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body <?php if(isset($page_body_id) && !empty($page_body_id)) echo "id='" . htmlspecialchars($page_body_id) . "'"; ?>>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.php">
