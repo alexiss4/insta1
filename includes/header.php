@@ -51,6 +51,12 @@ function get_lang_url($lang_code) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <?php if (isset($page_meta_desc_key)): ?>
+        <meta name="description" content="<?php echo htmlspecialchars(_t($page_meta_desc_key, '')); ?>">
+    <?php else: ?>
+        <meta name="description" content="<?php echo htmlspecialchars(_t('hero_description', 'Download Instagram photos, videos, and stories easily!')); ?>">
+    <?php endif; ?>
 </head>
 <body <?php if(isset($page_body_id) && !empty($page_body_id)) echo "id='" . htmlspecialchars($page_body_id) . "'"; ?>>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

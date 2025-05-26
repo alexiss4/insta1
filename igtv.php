@@ -1,5 +1,6 @@
 <?php
 $page_title_key = 'page_title_igtv'; // Define page title key
+$page_meta_desc_key = 'igtv_meta_desc'; // Define meta description key
 include 'includes/header.php';
 // include 'includes/language.php'; // Removed as header.php now handles language.php
 // include 'api/InstagramAPI.php'; // Removed as it's not directly used by this page for rendering
@@ -9,17 +10,17 @@ include 'includes/header.php';
     <div class="container">
         <?php include 'includes/content-tabs.php'; ?>
 
-        <h1 class="text-center">Instagram IGTV Downloader</h1>
-        <p class="lead text-center">Download long-form IGTV videos from Instagram</p>
+        <h1><?php echo _t('igtv_page_h1', 'Instagram IGTV Downloader'); ?></h1>
+        <p class="lead text-center"><?php echo _t('hero_description'); // Assuming hero_description is generic enough ?></p>
 
         <div class="row justify-content-center mt-4">
             <div class="col-md-8">
                 <form id="instagram-form" class="download-form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Insert IGTV video link here" name="instagram_url" id="instagram-url" required>
+                        <input type="text" class="form-control" placeholder="<?php echo _t('enter_instagram_igtv_url', 'Insert IGTV video link here'); ?>" name="instagram_url" id="instagram-url" required>
                         <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button" id="paste-btn">Paste</button>
-                            <button class="btn btn-primary" type="submit">Download</button>
+                            <button class="btn btn-secondary" type="button" id="paste-btn"><?php echo _t('paste_btn_text', 'Paste'); ?></button>
+                            <button class="btn btn-primary" type="submit"><?php echo _t('download', 'Download'); ?></button>
                         </div>
                     </div>
                 </form>
@@ -105,7 +106,7 @@ include 'includes/header.php';
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h2>Save IGTV Videos in High Quality</h2>
+            <h2>Save IGTV Videos in High Quality</h2> <!-- This H2 could also be made dynamic if needed -->
             <p>Our Instagram IGTV Downloader enables you to save long-form videos from IGTV. Whether it's a tutorial, a mini-documentary, or an extended vlog, you can now keep these videos offline for later viewing.</p>
 
             <h3>How to Download IGTV Videos:</h3>
@@ -124,12 +125,15 @@ include 'includes/header.php';
                 <li>No Watermarks: Get clean, unaltered videos without any overlays.</li>
                 <li>Cross-Platform Compatibility: Works on all major operating systems and devices.</li>
             </ul>
+
+            <p class="mt-4"><?php echo nl2br(_t('igtv_new_para1')); ?></p>
+            <p><?php echo nl2br(_t('igtv_new_para2')); ?></p>
         </div>
 
-        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for igtv.php -->
+        <div class="col-md-8 offset-md-2 mt-4"> 
             <h3><?php echo _t('igtv_extra_title', 'IGTV Download Tips'); ?></h3>
-            <p><?php echo _t('igtv_extra_p1', 'IGTV videos are typically longer. Ensure you have a stable connection for larger downloads. Our tool aims to get the full video in the best quality.'); ?></p>
-            <p><?php echo _t('igtv_extra_p2', 'You can copy the IGTV link directly from the Instagram app or website. Publicly available IGTVs are supported.'); ?></p>
+            <p><?php echo nl2br(_t('igtv_extra_p1', 'IGTV videos are typically longer. Ensure you have a stable connection for larger downloads. Our tool aims to get the full video in the best quality.')); ?></p>
+            <p><?php echo nl2br(_t('igtv_extra_p2', 'You can copy the IGTV link directly from the Instagram app or website. Publicly available IGTVs are supported.')); ?></p>
         </div>
     </div>
 </div>

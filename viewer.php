@@ -1,5 +1,6 @@
 <?php
 $page_title_key = 'page_title_profile'; // Define page title key
+$page_meta_desc_key = 'viewer_meta_desc'; // Define meta description key for header.php
 include 'includes/header.php';
 // include 'includes/language.php'; // Removed as header.php now handles language.php
 // include 'api/InstagramAPI.php'; // Removed as it's not directly used by this page for rendering
@@ -9,7 +10,7 @@ include 'includes/header.php';
     <div class="container">
         <?php include 'includes/content-tabs.php'; ?>
 
-        <h1 class="text-center">Instagram Profile Viewer</h1>
+        <h1 class="text-center"><?php echo _t('viewer_page_h1', 'Instagram Profile Viewer'); ?></h1>
         <p class="lead text-center">View Instagram profiles anonymously and download content</p>
 
         <div class="row justify-content-center mt-4">
@@ -124,12 +125,14 @@ include 'includes/header.php';
                 <li>Full Profile Overview: See posts, highlights, and basic profile information.</li>
                 <li>User-Friendly Interface: Easy navigation and intuitive design.</li>
             </ul>
+            <p class="mt-4"><?php echo nl2br(_t('viewer_new_para1')); ?></p>
+            <p><?php echo nl2br(_t('viewer_new_para2')); ?></p>
         </div> <!-- Closing the col-md-8 offset-md-2 -->
 
         <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for viewer.php -->
             <h3><?php echo _t('viewer_extra_title', 'Profile Viewing Tips'); ?></h3>
-            <p><?php echo _t('viewer_extra_p1', 'When viewing profiles, remember that only public information is accessible. Our tool does not bypass Instagram\'s privacy settings.'); ?></p>
-            <p><?php echo _t('viewer_extra_p2', 'You can use the viewer to check out recent posts and story highlights of public profiles without needing to log in.'); ?></p>
+            <p><?php echo nl2br(_t('viewer_extra_p1', 'When viewing profiles, remember that only public information is accessible. Our tool does not bypass Instagram\'s privacy settings.')); ?></p>
+            <p><?php echo nl2br(_t('viewer_extra_p2', 'You can use the viewer to check out recent posts and story highlights of public profiles without needing to log in.')); ?></p>
         </div>
     </div> <!-- Closing the row -->
 </div> <!-- Closing the container mt-5 -->

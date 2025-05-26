@@ -117,28 +117,11 @@ include 'includes/header.php';
                 <li><?php echo _t('step4', 'Save Your Content: Once processed, click on the download link to save the Instagram content to your device.'); ?></li>
             </ol>
 
-            <h3><?php echo _t('key_features', 'Key Features of Our Instagram Downloader'); ?></h3>
-            <ul>
-                <li><?php echo _t('feature1', 'High-Quality Downloads: Save Instagram videos and photos in their original high resolution.'); ?></li>
-                <li><?php echo _t('feature2', 'Multiple Format Support: Download Instagram Reels, IGTV videos, Stories, and carousel posts.'); ?></li>
-                <li><?php echo _t('feature3', 'No Login Required: Use our Instagram Downloader without an Instagram account or login.'); ?></li>
-                <li><?php echo _t('feature4', 'Fast and Reliable: Experience quick processing times and stable downloads.'); ?></li>
-                <li><?php echo _t('feature5', 'User-Friendly Interface: Navigate our simple, intuitive design with ease.'); ?></li>
-                <li><?php echo _t('feature6', 'Mobile Compatible: Download Instagram content on any device - smartphone, tablet, or computer.'); ?></li>
-                <li><?php echo _t('feature7', 'Free to Use: Enjoy unlimited Instagram downloads at no cost.'); ?></li>
-            </ul>
+            <h3><?php echo _t('key_features_summary_title', 'Core Features of Our Instagram Downloader'); ?></h3>
+            <p><?php echo _t('key_features_summary_text'); ?></p>
 
             <h3><?php echo _t('why_use', 'Why Use Our Instagram Downloader?'); ?></h3>
-            <p><?php echo _t('why_use_description', 'In today\'s digital age, Instagram has become a hub for sharing memorable moments, creative content, and important information. Our Instagram Downloader empowers you to preserve these digital memories, save inspirational content for offline viewing, and build your personal media library. Whether you\'re a content creator looking to repurpose Instagram videos, a marketer gathering social media assets, or simply someone who wants to keep their favorite Instagram photos, our tool provides a seamless solution for all your Instagram downloading needs.'); ?></p>
-
-            <h3><?php echo _t('applications', 'Applications of Our Instagram Downloader'); ?></h3>
-            <ul>
-                <li><?php echo _t('app1', 'Content Creation: Download Instagram videos and photos for inspiration or to include in your own content.'); ?></li>
-                <li><?php echo _t('app2', 'Digital Marketing: Save competitor Instagram content for market research and analysis.'); ?></li>
-                <li><?php echo _t('app3', 'Personal Archives: Create a backup of your own Instagram posts and stories.'); ?></li>
-                <li><?php echo _t('app4', 'Offline Viewing: Save Instagram Reels and IGTV videos to watch without an internet connection.'); ?></li>
-                <li><?php echo _t('app5', 'Educational Purposes: Download Instagram content for use in presentations or educational materials.'); ?></li>
-            </ul>
+            <p><?php echo _t('why_use_summary_text'); ?></p>
 
             <h3><?php echo _t('privacy_security', 'Privacy and Security'); ?></h3>
             <p><?php echo _t('privacy_description', 'We prioritize your privacy and security when using our Instagram Downloader. Our service doesn\'t store your personal information or the content you download. We operate in compliance with Instagram\'s terms of service and respect copyright laws. Always ensure you have the right to download and use the Instagram content you\'re saving.'); ?></p>

@@ -1,5 +1,6 @@
 <?php
 $page_title_key = 'page_title_video'; // Define page title key
+$page_meta_desc_key = 'video_meta_desc'; // Define meta description key
 include 'includes/header.php';
 // include 'includes/language.php'; // Removed as header.php now handles language.php
 // include 'api/InstagramAPI.php'; // Removed as it's not directly used by this page for rendering
@@ -9,17 +10,17 @@ include 'includes/header.php';
     <div class="container">
         <?php include 'includes/content-tabs.php'; ?>
 
-        <h1 class="text-center">Instagram Video Downloader</h1>
-        <p class="lead text-center">Download high-quality Instagram videos easily and quickly</p>
+        <h1><?php echo _t('video_page_h1', 'Instagram Video Downloader'); ?></h1>
+        <p class="lead text-center"><?php echo _t('hero_description'); // Assuming hero_description is generic enough, or create specific ones ?></p>
 
         <div class="row justify-content-center mt-4">
             <div class="col-md-8">
                 <form id="instagram-form" class="download-form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Insert Instagram video link here" name="instagram_url" id="instagram-url" required>
+                        <input type="text" class="form-control" placeholder="<?php echo _t('enter_instagram_url', 'Insert Instagram video link here'); ?>" name="instagram_url" id="instagram-url" required>
                         <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button" id="paste-btn">Paste</button>
-                            <button class="btn btn-primary" type="submit">Download</button>
+                            <button class="btn btn-secondary" type="button" id="paste-btn"><?php echo _t('paste_btn_text', 'Paste'); // Assuming 'paste_btn_text' or similar key, using fallback for now ?></button>
+                            <button class="btn btn-primary" type="submit"><?php echo _t('download', 'Download'); ?></button>
                         </div>
                     </div>
                 </form>
@@ -105,7 +106,7 @@ include 'includes/header.php';
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h2>Download Instagram Videos in High Quality</h2>
+            <h2>Download Instagram Videos in High Quality</h2> <!-- This H2 could also be made dynamic if needed -->
             <p>Our Instagram Video Downloader allows you to save your favorite Instagram videos in the highest available quality. Whether it's a viral clip, a tutorial, or a cherished memory, you can now keep these videos offline and watch them anytime.</p>
 
             <h3>How to Download Instagram Videos:</h3>
@@ -124,22 +125,26 @@ include 'includes/header.php';
                 <li>Compatible with All Devices: Works on smartphones, tablets, and computers.</li>
                 <li>Free to Use: No hidden costs or subscription fees.</li>
             </ul>
+
+            <p class="mt-4"><?php echo nl2br(_t('video_new_para1')); ?></p>
+            <p><?php echo nl2br(_t('video_new_para2')); ?></p>
         </div>
 
-        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for video.php -->
+        <div class="col-md-8 offset-md-2 mt-4"> 
             <h3><?php echo _t('video_extra_title', 'More About Video Downloads'); ?></h3>
-            <p><?php echo _t('video_extra_p1', 'Our service supports various video formats and resolutions, ensuring you get the best quality available. You can also choose to download only the audio from a video if needed.'); ?></p>
-            <p><?php echo _t('video_extra_p2', 'Remember to respect copyright and privacy. Only download videos if you have the right to do so. For private accounts, you will not be able to download their content.'); ?></p>
+            <p><?php echo nl2br(_t('video_extra_p1', 'Our service supports various video formats and resolutions, ensuring you get the best quality available. You can also choose to download only the audio from a video if needed.')); ?></p>
+            <p><?php echo nl2br(_t('video_extra_p2', 'Remember to respect copyright and privacy. Only download videos if you have the right to do so. For private accounts, you will not be able to download their content.')); ?></p>
         </div>
     </div>
 </div>
 
-<div class="container mt-5"> <!-- New unique section for video.php -->
+<!-- The duplicated section below was present in the original file, I'm keeping it as per instructions to only add new content -->
+<div class="container mt-5"> 
     <div class="row">
         <div class="col-md-8 offset-md-2 text-center">
             <h2><?php echo _t('video_extra_title', 'More About Video Downloads'); ?></h2>
-            <p><?php echo _t('video_extra_p1', 'Our service supports various video formats and resolutions, ensuring you get the best quality available. You can also choose to download only the audio from a video if needed.'); ?></p>
-            <p><?php echo _t('video_extra_p2', 'Remember to respect copyright and privacy. Only download videos if you have the right to do so. For private accounts, you will not be able to download their content.'); ?></p>
+            <p><?php echo nl2br(_t('video_extra_p1', 'Our service supports various video formats and resolutions, ensuring you get the best quality available. You can also choose to download only the audio from a video if needed.')); ?></p>
+            <p><?php echo nl2br(_t('video_extra_p2', 'Remember to respect copyright and privacy. Only download videos if you have the right to do so. For private accounts, you will not be able to download their content.')); ?></p>
         </div>
     </div>
 </div>

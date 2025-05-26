@@ -1,5 +1,6 @@
 <?php
 $page_title_key = 'page_title_carousel'; // Define page title key
+$page_meta_desc_key = 'carousel_meta_desc'; // Define meta description key
 include 'includes/header.php';
 // include 'includes/language.php'; // Removed as header.php now handles language.php
 // include 'api/InstagramAPI.php'; // Removed as it's not directly used by this page for rendering
@@ -9,17 +10,17 @@ include 'includes/header.php';
     <div class="container">
         <?php include 'includes/content-tabs.php'; ?>
 
-        <h1 class="text-center">Instagram Carousel Downloader</h1>
-        <p class="lead text-center">Download multiple photos and videos from Instagram carousels</p>
+        <h1><?php echo _t('carousel_page_h1', 'Instagram Carousel Downloader'); ?></h1>
+        <p class="lead text-center"><?php echo _t('hero_description'); // Assuming hero_description is generic enough ?></p>
 
         <div class="row justify-content-center mt-4">
             <div class="col-md-8">
                 <form id="instagram-form" class="download-form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Insert Instagram carousel post link here" name="instagram_url" id="instagram-url" required>
+                        <input type="text" class="form-control" placeholder="<?php echo _t('enter_instagram_carousel_url', 'Insert Instagram carousel post link here'); ?>" name="instagram_url" id="instagram-url" required>
                         <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button" id="paste-btn">Paste</button>
-                            <button class="btn btn-primary" type="submit">Download</button>
+                            <button class="btn btn-secondary" type="button" id="paste-btn"><?php echo _t('paste_btn_text', 'Paste'); ?></button>
+                            <button class="btn btn-primary" type="submit"><?php echo _t('download', 'Download'); ?></button>
                         </div>
                     </div>
                 </form>
@@ -105,7 +106,7 @@ include 'includes/header.php';
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h2>Download All Media from Instagram Carousels</h2>
+            <h2>Download All Media from Instagram Carousels</h2> <!-- This H2 could also be made dynamic if needed -->
             <p>Our Instagram Carousel Downloader allows you to save all photos and videos from multi-post Instagram carousels. Don't miss any part of a story or collection shared in a single post.</p>
 
             <h3>How to Download Instagram Carousels:</h3>
@@ -124,12 +125,15 @@ include 'includes/header.php';
                 <li>Easy Organization: Downloaded files are numbered in the order they appear in the carousel.</li>
                 <li>Time-Saving: No need to manually screenshot or screen-record carousel items.</li>
             </ul>
+
+            <p class="mt-4"><?php echo nl2br(_t('carousel_new_para1')); ?></p>
+            <p><?php echo nl2br(_t('carousel_new_para2')); ?></p>
         </div>
 
-        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for carousel.php -->
+        <div class="col-md-8 offset-md-2 mt-4"> 
             <h3><?php echo _t('carousel_extra_title', 'Carousel Download Insights'); ?></h3>
-            <p><?php echo _t('carousel_extra_p1', 'Carousels can contain a mix of photos and videos. Our tool helps you download all items from a public carousel post.'); ?></p>
-            <p><?php echo _t('carousel_extra_p2', 'The downloaded items will typically be named in sequence to help you identify their order.'); ?></p>
+            <p><?php echo nl2br(_t('carousel_extra_p1', 'Carousels can contain a mix of photos and videos. Our tool helps you download all items from a public carousel post.')); ?></p>
+            <p><?php echo nl2br(_t('carousel_extra_p2', 'The downloaded items will typically be named in sequence to help you identify their order.')); ?></p>
         </div>
     </div>
 </div>
