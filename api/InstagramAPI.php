@@ -2,11 +2,12 @@
 class InstagramAPI {
     private $userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36';
 
-    public function getMediaInfo($url) {
-        return $this->getMockDataByUrl($url);
+    public function getMediaInfo($url, $contentType = null) {
+        return $this->getMockDataByUrl($url, $contentType);
     }
 
-    private function getMockDataByUrl($url) {
+    private function getMockDataByUrl($url, $contentType = null) {
+        // TODO: Consider using $contentType as a hint if URL matching is ambiguous
         // Check for post or reel URLs
         if (preg_match('/instagram.com\/(p|reel)\/([a-zA-Z0-9_-]+)/', $url, $matches)) {
             // For simplicity, let's return an image post by default.
@@ -45,12 +46,36 @@ class InstagramAPI {
                 ];
             }
         }
+        // Check for story URLs
+        elseif (preg_match('/instagram.com\/stories\/([a-zA-Z0-9_.]+)\/([a-zA-Z0-9_-]+)/', $url, $matches)) {
+            return [
+                'type' => 'image', // Changed from 'story' to 'image' for frontend compatibility
+                'url' => 'https://via.placeholder.com/1080x1920.png?text=Mock+Story+' . $matches[2],
+                'thumbnail_url' => 'https://via.placeholder.com/200x355.png?text=StoryThumb+' . $matches[2],
+                'caption' => 'This is a mock story from user ' . $matches[1] . ' with ID: ' . $matches[2],
+                'username' => $matches[1],
+                'profile_picture' => 'https://via.placeholder.com/50x50.png?text=User',
+                'timestamp' => time() - rand(0, 3600*23)
+            ];
+        }
+        // Check for IGTV URLs
+        elseif (preg_match('/instagram.com\/tv\/([a-zA-Z0-9_-]+)/', $url, $matches)) {
+            return [
+                'type' => 'video', // Changed from 'igtv' to 'video' for frontend compatibility
+                'url' => 'https://www.w3schools.com/html/mov_bbb.mp4',
+                'thumbnail_url' => 'https://via.placeholder.com/480x854.png?text=Mock+IGTV+' . $matches[1],
+                'caption' => 'This is a mock IGTV video with ID: ' . $matches[1],
+                'title' => 'Mock IGTV Title - ' . $matches[1],
+                'username' => 'mockuser_igtv',
+                'profile_picture' => 'https://via.placeholder.com/50x50.png?text=User'
+            ];
+        }
         // Check for profile URLs (basic check, might need refinement)
         elseif (preg_match('/instagram.com\/([a-zA-Z0-9_.]+)\/?$/', $url, $matches)) {
             $username = $matches[1];
-            // Avoid matching /p/ or /reel/ as profiles
-            if ($username === 'p' || $username === 'reel') {
-                return ['error' => 'Invalid URL format.'];
+            // Avoid matching /p/, /reel/, /stories/ or /tv/ as profiles
+            if ($username === 'p' || $username === 'reel' || $username === 'stories' || $username === 'tv') {
+                return ['error' => 'Invalid URL format or conflict with specific content type.'];
             }
             return [
                 'is_profile' => true,

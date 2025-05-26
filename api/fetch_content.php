@@ -19,7 +19,7 @@ $contentType = isset($_POST['contentType']) ? trim($_POST['contentType']) : null
 // However, a real API might use this for more specific requests.
 
 $api = new InstagramAPI();
-$mediaInfo = $api->getMediaInfo($url); // contentType is not passed to the mock API
+$mediaInfo = $api->getMediaInfo($url, $contentType);
 
 if (isset($mediaInfo['error'])) {
     echo json_encode([
