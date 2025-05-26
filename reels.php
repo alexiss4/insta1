@@ -1,5 +1,6 @@
 <?php
 $page_title_key = 'page_title_reels'; // Define page title key
+$page_meta_desc_key = 'reels_meta_desc'; // Define meta description key
 include 'includes/header.php';
 // include 'includes/language.php'; // Removed as header.php now handles language.php
 // include 'api/InstagramAPI.php'; // Removed as it's not directly used by this page for rendering
@@ -9,17 +10,17 @@ include 'includes/header.php';
     <div class="container">
         <?php include 'includes/content-tabs.php'; ?>
 
-        <h1 class="text-center">Instagram Reels Downloader</h1>
-        <p class="lead text-center">Download Instagram Reels videos quickly and easily</p>
+        <h1><?php echo _t('reels_page_h1', 'Instagram Reels Downloader'); ?></h1>
+        <p class="lead text-center"><?php echo _t('hero_description'); // Assuming hero_description is generic enough ?></p>
 
         <div class="row justify-content-center mt-4">
             <div class="col-md-8">
                 <form id="instagram-form" class="download-form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Insert Instagram Reels link here" name="instagram_url" id="instagram-url" required>
+                        <input type="text" class="form-control" placeholder="<?php echo _t('enter_instagram_reels_url', 'Insert Instagram Reels link here'); ?>" name="instagram_url" id="instagram-url" required>
                         <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button" id="paste-btn">Paste</button>
-                            <button class="btn btn-primary" type="submit">Download</button>
+                            <button class="btn btn-secondary" type="button" id="paste-btn"><?php echo _t('paste_btn_text', 'Paste'); ?></button>
+                            <button class="btn btn-primary" type="submit"><?php echo _t('download', 'Download'); ?></button>
                         </div>
                     </div>
                 </form>
@@ -105,7 +106,7 @@ include 'includes/header.php';
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h2>Save Instagram Reels Videos Offline</h2>
+            <h2>Save Instagram Reels Videos Offline</h2> <!-- This H2 could also be made dynamic if needed -->
             <p>Our Instagram Reels Downloader lets you save entertaining and creative short-form videos from Instagram. Keep your favorite Reels on your device to watch anytime, even without an internet connection.</p>
 
             <h3>How to Download Instagram Reels:</h3>
@@ -124,12 +125,15 @@ include 'includes/header.php';
                 <li>Easy to Use: Simple, user-friendly interface for quick downloads.</li>
                 <li>Free Service: No hidden fees or subscriptions.</li>
             </ul>
+
+            <p class="mt-4"><?php echo nl2br(_t('reels_new_para1')); ?></p>
+            <p><?php echo nl2br(_t('reels_new_para2')); ?></p>
         </div>
 
-        <div class="col-md-8 offset-md-2 mt-4"> <!-- New unique section for reels.php -->
+        <div class="col-md-8 offset-md-2 mt-4"> 
             <h3><?php echo _t('reels_extra_title', 'Understanding Reels Downloads'); ?></h3>
-            <p><?php echo _t('reels_extra_p1', 'Reels are short, engaging videos. Our tool helps you save these quickly. Downloaded Reels include audio and are saved in standard video formats.'); ?></p>
-            <p><?php echo _t('reels_extra_p2', 'Please note that some Reels may have specific privacy settings that could affect download availability if they are not public.'); ?></p>
+            <p><?php echo nl2br(_t('reels_extra_p1', 'Reels are short, engaging videos. Our tool helps you save these quickly. Downloaded Reels include audio and are saved in standard video formats.')); ?></p>
+            <p><?php echo nl2br(_t('reels_extra_p2', 'Please note that some Reels may have specific privacy settings that could affect download availability if they are not public.')); ?></p>
         </div>
     </div>
 </div>
