@@ -255,18 +255,9 @@ body {
     transform: scale(1.2);
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 40px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
+/* @keyframes fadeInUp definition removed as it's a duplicate */
 
-.content-type-box {
+.content-type-box { /* This was also duplicated, keeping the one with animation */
     animation: fadeInUp 0.5s ease-out;
     animation-fill-mode: both;
 }
@@ -330,3 +321,39 @@ body {
 }
 
 /* ... (rest of your CSS remains the same) ... */
+
+/* FAQ Page Styles */
+.faq-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background-color: #f9f9f9; /* Light background for each item */
+    border: 1px solid #eee;    /* Subtle border */
+    border-radius: 5px;        /* Rounded corners */
+    padding: 15px;             /* Padding inside each item */
+    margin-bottom: 15px;       /* Space between FAQ items */
+}
+
+.faq-item h2 {
+    font-size: 1.5em;          /* Question font size */
+    color: #333;               /* Question color */
+    margin-top: 0;
+    margin-bottom: 10px;       /* Space below question */
+}
+
+.faq-item p {
+    font-size: 1em;            /* Answer font size */
+    color: #555;               /* Answer color */
+    line-height: 1.6;          /* Spacing for answer text */
+    margin-bottom: 0;
+}
+
+/* 
+// If .container needs specific padding and it's not handled globally or by Bootstrap grid:
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+*/

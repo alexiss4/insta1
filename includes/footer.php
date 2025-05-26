@@ -16,6 +16,7 @@
                     <li><a href="index.php"><?php echo _t('home', 'Home'); ?></a></li>
                     <li><a href="#about"><?php echo _t('about', 'About'); ?></a></li>
                     <li><a href="#contact"><?php echo _t('contact', 'Contact'); ?></a></li>
+                    <li><a href="faq.php"><?php echo _t('faq_link_text', 'FAQ'); ?></a></li>
                 </ul>
             </div>
             <div class="col-md-3">

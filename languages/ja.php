@@ -50,5 +50,19 @@ $lang = [
     'page_title_igtv' => '[JA] Instagram IGTV Downloader',
     'page_title_carousel' => '[JA] Instagram Carousel Downloader',
     'page_title_profile' => '[JA] Instagram Profile Viewer',
+
+    // FAQ Section
+    'faq_title' => '[JA] Frequently Asked Questions',
+    'faq_q1_question' => '[JA] What is SaveFromIG.com?',
+    'faq_q1_answer' => '[JA] SaveFromIG.com is a free online service that allows you to easily download Instagram content such as photos, videos, Reels, IGTV videos, and carousel posts directly to your device.',
+    'faq_q2_question' => '[JA] How do I use SaveFromIG.com to download?',
+    'faq_q2_answer' => '[JA] It\\\'s simple!\\n1. Copy the URL of the Instagram photo, video, Reel, IGTV, or post you want to download.\\n2. Paste the URL into the input field on the SaveFromIG.com homepage.\\n3. Click the "Download" button. The content will be fetched, and download links will be provided.',
+    'faq_q3_question' => '[JA] Is it legal to download content from Instagram?',
+    'faq_q3_answer' => '[JA] You can download content from Instagram for personal use. However, it\\\'s crucial to respect copyright and intellectual property rights. Content you download should not be used for commercial purposes without the explicit permission of the original creator. Always give credit to the author if you repost or share.',
+    'faq_q4_question' => '[JA] What devices are supported by SaveFromIG.com?',
+    'faq_q4_answer' => '[JA] SaveFromIG.com is a web-based tool and works on any device with a modern web browser, including PCs, Macs, iPhones, Android phones, and tablets. No software installation is required.',
+    'faq_q5_question' => '[JA] What is the quality of the downloaded photos and videos?',
+    'faq_q5_answer' => '[JA] SaveFromIG.com aims to download content in the highest quality available, as originally uploaded by the user on Instagram. We do not alter the quality of the media.',
+    'faq_link_text' => '[JA] FAQ',
 ];
 ?>

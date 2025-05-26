@@ -103,5 +103,19 @@ $lang = [
     'viewer_extra_title' => 'نصائح لعرض الملف الشخصي',
     'viewer_extra_p1' => 'عند عرض الملفات الشخصية، تذكر أن المعلومات العامة فقط هي التي يمكن الوصول إليها. أداتنا لا تتجاوز إعدادات خصوصية انستجرام.',
     'viewer_extra_p2' => 'يمكنك استخدام العارض للتحقق من المنشورات الحديثة وأبرز القصص للملفات الشخصية العامة دون الحاجة إلى تسجيل الدخول.',
+
+    // FAQ Section
+    'faq_title' => '[AR] Frequently Asked Questions',
+    'faq_q1_question' => '[AR] What is SaveFromIG.com?',
+    'faq_q1_answer' => '[AR] SaveFromIG.com is a free online service that allows you to easily download Instagram content such as photos, videos, Reels, IGTV videos, and carousel posts directly to your device.',
+    'faq_q2_question' => '[AR] How do I use SaveFromIG.com to download?',
+    'faq_q2_answer' => '[AR] It\\\'s simple!\\n1. Copy the URL of the Instagram photo, video, Reel, IGTV, or post you want to download.\\n2. Paste the URL into the input field on the SaveFromIG.com homepage.\\n3. Click the "Download" button. The content will be fetched, and download links will be provided.',
+    'faq_q3_question' => '[AR] Is it legal to download content from Instagram?',
+    'faq_q3_answer' => '[AR] You can download content from Instagram for personal use. However, it\\\'s crucial to respect copyright and intellectual property rights. Content you download should not be used for commercial purposes without the explicit permission of the original creator. Always give credit to the author if you repost or share.',
+    'faq_q4_question' => '[AR] What devices are supported by SaveFromIG.com?',
+    'faq_q4_answer' => '[AR] SaveFromIG.com is a web-based tool and works on any device with a modern web browser, including PCs, Macs, iPhones, Android phones, and tablets. No software installation is required.',
+    'faq_q5_question' => '[AR] What is the quality of the downloaded photos and videos?',
+    'faq_q5_answer' => '[AR] SaveFromIG.com aims to download content in the highest quality available, as originally uploaded by the user on Instagram. We do not alter the quality of the media.',
+    'faq_link_text' => '[AR] FAQ',
 ];
 ?>
