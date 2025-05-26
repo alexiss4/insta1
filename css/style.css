@@ -357,3 +357,50 @@ body {
     padding-right: 15px;
 }
 */
+
+@media (max-width: 575.98px) {
+    .download-form .input-group {
+        flex-direction: column;
+        border-radius: 0; /* Remove group rounding */
+        box-shadow: none; /* Remove group shadow */
+        background-color: transparent; /* Make group background transparent */
+        overflow: visible; /* Ensure children are not clipped if they have their own shadows later */
+    }
+
+    .download-form .form-control {
+        width: 100%;
+        border-radius: 10px; /* Individual rounding */
+        margin-bottom: 10px;
+        border: 1px solid #ddd; /* Add a light border as group styling is removed */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for input */
+    }
+
+    .download-form .input-group-append {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0; /* Reset any margin from desktop */
+    }
+
+    .download-form .btn {
+        width: 100%;
+        border-radius: 10px; /* Individual rounding for buttons */
+        margin-bottom: 10px; /* Space between stacked buttons */
+        /* Padding and font-size are inherited, check if they need adjustment */
+    }
+
+    .download-form .input-group-append .btn:last-child {
+        margin-bottom: 0; /* No margin for the last button */
+    }
+
+    .download-form .btn-secondary {
+         /* Ensure secondary button also has a clear visual style if needed */
+        background-color: #e9ecef; /* Lighter background for secondary */
+        color: #333;
+    }
+
+    .download-form .btn-primary {
+        /* Ensure primary button also has a clear visual style */
+        background-color: #007bff; /* Standard primary blue */
+    }
+}
